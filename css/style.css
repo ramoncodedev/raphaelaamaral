@@ -589,3 +589,22 @@ main { position: relative; z-index: 1; background: var(--noite); }
 .par > .par-prev { position: sticky; top: var(--par-top, 0px); z-index: 0; }
 .par > .par-next { position: relative; z-index: 1; }
 @media (max-width: 720px) { .par > .par-prev { position: relative; top: auto; } }
+
+/* ---------- Hero no mobile (como a referência): rótulo → título → foto com cartão → texto → botões → números ---------- */
+@media (max-width: 1060px) {
+  .hero { align-items: flex-start; padding: calc(var(--nav-h) + 28px) 0 56px; min-height: 0; }
+  .hero-grade { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .hero-texto { display: contents; }
+  .hero-rotulo { order: 1; align-items: flex-start; font-size: 11px; line-height: 1.5; letter-spacing: .14em; }
+  .hero-rotulo .ponto { margin-top: 5px; }
+  .hero-titulo { order: 2; margin-top: 18px; font-size: clamp(38px, 10.6vw, 64px); line-height: .98; }
+  .hero-foto { order: 3; height: clamp(380px, 112vw, 560px); min-height: 0; margin-top: 26px; margin-bottom: 64px; translate: none; }
+  .hero-cartao-envolto { left: 3%; width: 94%; bottom: -46px; }
+  .hero-linha { order: 4; margin-top: 0; font-size: 16px; max-width: none; }
+  .hero-botoes { order: 5; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 24px; }
+  .hero-numeros { order: 6; margin-top: 34px; }
+}
+@media (max-width: 720px) {
+  .hero-numeros small { font-size: 9px; letter-spacing: .1em; }
+  .hero-numeros b { font-size: 30px; }
+}
