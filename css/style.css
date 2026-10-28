@@ -608,3 +608,6 @@ main { position: relative; z-index: 1; background: var(--noite); }
   .hero-numeros small { font-size: 9px; letter-spacing: .1em; }
   .hero-numeros b { font-size: 30px; }
 }
+
+.flip-dica .d-toque { display: none; }
+@media (hover: none) { .flip-dica .d-mouse { display: none; } .flip-dica .d-toque { display: inline; } }
