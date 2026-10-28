@@ -611,3 +611,12 @@ main { position: relative; z-index: 1; background: var(--noite); }
 
 .flip-dica .d-toque { display: none; }
 @media (hover: none) { .flip-dica .d-mouse { display: none; } .flip-dica .d-toque { display: inline; } }
+
+/* Método no mobile: sem a seção fixa/odômetro — as 4 fases viram uma lista simples */
+@media (max-width: 1060px) {
+  .metodo-trilho { height: auto; padding-bottom: clamp(64px, 12vw, 110px); }
+  .metodo-palco { position: static; height: auto; display: block; padding-top: clamp(32px, 6vw, 56px); padding-bottom: 0; }
+  .odo, .fase-prog { display: none; }
+  .fases-txt { display: block; max-width: none; margin-top: 28px; border-top: 1px solid var(--fio-claro); }
+  .fase-b, .fase-b.is-on { grid-area: auto; opacity: 1; translate: none; transition: none; pointer-events: auto; padding: 26px 0; border-bottom: 1px solid var(--fio-claro); }
+}
